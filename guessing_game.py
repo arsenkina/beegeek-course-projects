@@ -48,17 +48,19 @@ def main():
                 attempts += 1
 
             else:
-                print(f'Вы угадали, поздравляем! Вам потребовалось {attempts} попыток')
-                attempts = 0
+                break
 
-                print('Хотите сыграть ещё раз?')
-                answer = get_valid(lambda ans: ans.lower() == 'да' or ans.lower() == 'нет',
-                                   'Введите \'Да\' или \'Нет\'').lower()
+        print(f'Вы угадали, поздравляем! Вам потребовалось {attempts} попыток')
+        attempts = 0
 
-                if answer == 'да':
-                    break
-                else:
-                    return
+        print('Хотите сыграть ещё раз?')
+        answer = get_valid(lambda ans: ans.lower() == 'да' or ans.lower() == 'нет',
+                           'Введите \'Да\' или \'Нет\'').lower()
+
+        if answer == 'да':
+            continue
+        else:
+            break
 
 
 if __name__ == '__main__':
