@@ -1,1 +1,3 @@
-# beegeek-course-projects
+# Beegeek course projects
+
+![certificate](resources/certificate.png)
